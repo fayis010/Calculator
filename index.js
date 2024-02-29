@@ -1,0 +1,36 @@
+let display = document.getElementById('display');
+
+function appendToDisplay(value) {
+    display.value += value;
+}
+
+function clearDisplay() {
+    display.value = '';
+}
+function deleteLast() {
+    let currentValue = display.value;
+    if (currentValue.length > 0) {
+        display.value = currentValue.slice(0, -1);
+    }
+}
+
+
+function calculateResult() {
+    try {
+        display.value = eval(display.value);
+    } catch (error) {
+        display.value = 'Error';
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
